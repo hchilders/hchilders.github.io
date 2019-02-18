@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+ <html>
+  <head>
+ <title>Hangman!</title>
+</head>
+<body>
+ <h1> Hangman! </h1>
+ <script>
+ //create a list of words to choose from
+ var words = ["pugs", "sad", "penguins", "fortnite"];
+ 
+ //pick a random word
+ var word = words[Math.floor(Math.random() *words.length)];
+ 
+ //set up an array for the answer
+ var answerArray = [];
+ for(var i = 0 i < word.length; i++)
+ {
+ answerArray[i] = "_";
+ }
+ 
+ var remainingLetters = word.length;
+ 
+ //the game loop
+ while (remainingLetters > 0)
+ {
+ //show player progress
+ alert(answerArray.join(" ");
+ }
+ 
+ // get guess from player
+ var guess = prompt("Please guess a single letter");
+ if (guess === null)
+ {
+ //quit
+ break;
+ }else if(guess.length !== 1)
+ {
+ alert("You must enter only a SINGLE letter!")
+ }else{
+ //they have guessed a letter, is it there
+ for(var j = 0; j < word.length; j++)
+ {
+ if(word[j] === guess)
+ {
+ answerArray[j] = guess;
+ remainingLetters--;
+ }
+ }
+ }
+ }
+ alert("Good Job! The answer was " + word);
+ 
+ 
+   </script>
+  </body>
+ </html>
