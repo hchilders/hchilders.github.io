@@ -56,7 +56,7 @@
     
     var Hints = function(distance)
     {
-      if (distance <= 13)
+      else if (distance <= 13)
       {
          $("#distance").setText("You're on fire!");
       }
@@ -64,7 +64,7 @@
       {
          $("#distance").setText("You're hot!");
       }
-      if (distance <= 60)
+      else if(distance <= 60)
       {
          $("#distance").setText("You're warm!");
       }
