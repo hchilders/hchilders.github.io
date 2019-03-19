@@ -1,3 +1,5 @@
+
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +32,7 @@
     var getDistanceToTreasure = function(event, treasure)
     {
       var xDifference = event.offsetX - treasure.x;
-      var yDifference = event.offsetY - treasure.y:
+      var yDifference = event.offsetY - treasure.y;
       return Math.sqrt((xDifference * xDifference) +
                        (yDifference * yDifference)); // Pythagorean Theorem
     };
@@ -45,7 +47,7 @@
       if (distance <= 8)
       {
         // if they have 'found it' tell them how many clicks it took
-        $("#distance").setText("You found it in " + clicks+" clicks.");
+        $("#distance").text("You found it in " + clicks+" clicks.");
       }
       else{
         // give a hint if they are too far away
@@ -58,27 +60,27 @@
     {
       if (distance <= 13)
       {
-         $("#distance").setText("You're on fire!");
+         $("#distance").text("You're on fire!");
       }
       else if(distance <= 20)
       {
-         $("#distance").setText("You're hot!");
+         $("#distance").text("You're hot!");
       }
       else if (distance <= 60)
       {
-         $("#distance").setText("You're warm!");
+         $("#distance").text("You're warm!");
       }
       else if(distance <= 150)
       {
-        $("#distance").setText("You're slightly cold!");
+        $("#distance").text("You're slightly cold!");
       }      
       else if (distance <= 225)
       {
-        $("#distance").setText("You're cold!");  
+        $("#distance").text("You're cold!");  
       }
       else if(distance <= 350)
       {
-         $("#distance").setText("You're cold!"); 
+         $("#distance").text("You real cold"); 
       }
       };
   </script>
