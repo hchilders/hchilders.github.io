@@ -37,7 +37,33 @@
       Car.prototype.moveRight = function()
       {
         this.x += 5; // adds 5 to the x value
-        
+        // this updates the position on the screen
+        this.carElement.css({
+          left: this.x, 
+          top: this.y
+        });
+      };
+      Car.prototype.moveLeft = function()
+      {
+        this.x -= 5; // subtracts 5 from the x value
+        // this updates the position on the screen
+        this.carElement.css({
+          left: this.x, 
+          top: this.y
+        });
+      };
+      Car.prototype.moveDown = function()
+      {
+        this.y += 5; // adds 5 to the y value
+        // this updates the position on the screen
+        this.carElement.css({
+          left: this.x, 
+          top: this.y
+        });
+      };
+      Car.prototype.moveUp = function()
+      {
+        this.y -= 5; // subtracts 5 from the y value
         // this updates the position on the screen
         this.carElement.css({
           left: this.x, 
@@ -47,13 +73,33 @@
       
       tesla.draw();
       tesla.moveRight();
-      tesla.moveRight();
-      tesla.moveRight();
+      tesla.moveLeft();
+      tesla.moveUp();
+      tesla.moveDown();
       var nissan = new Car(100, 200);
       nissan.draw();
       nissan.moveRight();
-      nissan.moveRight();
-      nissan.moveRight();
+      nissan.moveLeft();
+      nissan.moveUp();
+      nissan.moveDown();
+      var bugatti = new Car(500, 200);
+      bugatti.draw();
+      bugatti.moveRight();
+      bugatti.moveLeft();
+      bugatti.moveUp();
+      bugatti.moveDown();
+      var lamborghini = new Car(200, 300);
+      lamborghini.draw();
+      lamborghini.moveRight();
+      lamborghini.moveLeft();
+      lamborghini.moveUp();
+      lamborghini.moveDown();
+      var challenger = new Car(400, 200);
+      challenger.draw();
+      challenger.moveRight();
+      challenger.moveLeft();
+      challenger.moveUp(); 
+      challenger.moveDown();
     </script>
   </body>
 </html>
