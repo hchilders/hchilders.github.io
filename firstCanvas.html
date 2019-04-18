@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <title>Canvas</title>
- </head>
- <body>
-  <canvas id="canvas" width="400" height="400"></canvas>
-  
-  <script>
-    var canvas = document.getelementById("canvas");
-    var ctx = canvas.getContext("2d");
-   ctx.fillRect(0, 0, 10, 20)
-    for(var i = 0; i < 5; i++)
-    {
-    ctx.fillRect(i*28, i*28, 20, 20);
-    }
-  </script>
- </body>
+  <head>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    
+    <script>
+      var canvas = document.getElementById("canvas"); // look for canvas
+      var ctx = canvas.getContext("2d"); // tells javascript that the drawing will be 2 dimensional
+      for(var i = 0; i < 5; i++)
+      {
+        ctx.fillRect(i*20, i*20, 20, 20); // draw and fill a rectangle, at (0,0) with sides of length 10 and 20
+      }
+    </script>
+  </body>
 </html>
